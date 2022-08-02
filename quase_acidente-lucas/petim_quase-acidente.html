@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETIM</title>
+    <style>
+    
+    .button{
+    padding: 20px;
+    margin: 10px;
+    background-color: green;
+    color: white;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+    #quase_acidente{
+        text-align: center;
+    }
+
+    #descricao{
+        width: 500pt;
+        height: 200pt;
+    }
+
+    #solucao{
+        width: 500pt;
+        height: 200pt;
+    }
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="https://www.jotform.com/uploads/pormade/form_files/logo%20cipa%20sem%20fundo.60ed8d8d28d122.65100768.png" alt="Logo" height="177px" width="250px">
+    </div>
+    <form class="borda"  id="quase_acidente">
+        <fieldset id="parte1">
+            <legend>  Quase Acidente - Uma ação de prevenção contra acidentes de trabalho  </legend>
+            <br><br>
+            <label for="nome">Nome Completo do Emitente:</label>
+            <br><br>
+            <input id="nome" type="text" placeholder="Nome" required>
+            <input id="sobrenome" type="text" placeholder="Sobrenome" required>
+            <br><br><br>
+            <label for="email">Email do Emitente:</label>
+            <br><br>
+            <input id="email" type="email" required placeholder="exemplo@exemplo.com">
+            <br><br><br>
+            <label for="cracha">Crachá do Emitente:</label>
+            <br><br>
+            <input id="cracha" type="number" placeholder="Informe o seu número de Crachá" required>
+            <br><br><br>
+            <label for="slc_setor">Setor do Emitente:</label>
+            <select id="setor" required>
+                <option value=""> Selecione o seu setor </option>
+                <option value="Acabamento"> Acabamento </option>
+                <option value="ADVA"> ADVA </option>
+                <option value="ADVI"> ADVI </option>
+                <option value="Ambulatório"> Ambulatório </option>
+                <option value="Amostras"> Amostras </option>
+                <option value="Call Center"> Call Center </option>
+                <option value="Chapas"> Chapas </option>
+                <option value="Colagem"> Colagem </option>
+                <option value="Direção"> Direção </option>
+                <option value="Divulgadores"> Divulgadores </option>
+                <option value="Embalagens"> Embalagens </option>
+                <option value="Engenharia"> Engenharia </option>
+                <option value="Eu Existo"> Eu Existo </option>
+                <option value="Expedição"> Expedição </option>
+                <option value="Externos"> Externos </option>
+                <option value="Extrusão"> Extrusão </option>
+                <option value="Ferragens"> Ferragens </option>
+                <option value="Financeiro"> Financeiro </option>
+                <option value="Franquias"> Franquias </option>
+                <option value="Jurídico"> Jurídico </option>
+                <option value="Linha HD"> Linha HD </option>
+                <option value="Loja"> Loja </option>
+                <option value="Manutenção"> Manutenção </option>
+                <option value="Marketing"> Marketing </option>
+                <option value="Online"> Online </option>
+                <option value="Organização e Copa"> Organização e Copa </option>
+                <option value="PCP"> PCP </option>
+                <option value="Pintura"> Pintura </option>
+                <option value="Pintura UV"> Pintura UV </option>
+                <option value="Pormade Casa"> Pormade Casa </option>
+                <option value="Pormade Móvel"> Pormade Móvel </option>
+                <option value="Porta Pronta"> Porta Pronta </option>
+                <option value="Pré Montagem"> Pré Montagem </option>
+                <option value="Qualidade"> Qualidade </option>
+                <option value="Qualificação de Instaladores"> Qualificação de Instaladores </option>
+                <option value="Recobrimento"> Recobrimento </option>
+                <option value="Representantes Comerciais"> Representantes Comerciais </option>
+                <option value="RH"> RH </option>
+                <option value="SBA"> SBA </option>
+                <option value="Segurança"> Segurança </option>
+                <option value="Showrooms"> Showrooms </option>
+                <option value="SIMP"> SIMP </option>
+                <option value="Soluções B2C"> Soluções B2C </option>
+                <option value="Startup"> Startup </option>
+                <option value="Suprimentos"> Suprimentos </option>
+                <option value="Televendas"> Televendas </option>
+                <option value="TI"> TI </option>
+                <option value="Unicop"> Unicop </option>
+                <option value="Usinagem"> Usinagem </option>
+                <option value="Usinagem de Marcos"> Usinagem de Marcos </option>
+                <option value="Usinagem de Portas"> Usinagem de Portas </option>
+                <option value="Varejo"> Varejo </option>
+                <option value="Vendedores Externos"> Vendedores Externos </option>
+              </select>
+        </fieldset>
+        <br><br>
+        <fieldset id="parte2">
+        <legend>  Informações sobre o Quase Acidente  </legend>
+        <br><br>
+        <label for="situacao">Título do Quase Acidente ou Situação de Risco:</label>
+        <br><br>
+        <input id="situacao" type="text" placeholder="Informe um título breve" required>
+        <br><br><br>
+        <label for="local">Nome da Máquina ou Local:</label>
+        <br><br>
+        <input id="local" type="text" placeholder="Informe o nome da máquina ou local onde ocorreu este Quase Acidente" required>
+        <br><br><br>
+        <label for="houve_acidente">Houve acidentes?</label>
+        <br><br>
+        <select id="houve_acidente" required>
+            <option value="favor_selecionar"> Favor Selecionar </option>
+            <option value="sim"> Sim </option>
+            <option value="nao"> Não </option>
+        </select>
+        <br><br><br>
+        <label for="descricao">Descrição do Quase Acidente ou da Situação de Risco:</label>
+        <br><br>
+        <textarea id="descricao" placeholder="Digite Aqui..."></textarea required>
+        <br><br><br>
+        <label for="solucao">Possível solução para que a situação não volte a ocorrer:</label>
+        <br><br>
+        <textarea id="solucao" placeholder="Digite Aqui..."></textarea required>
+        <br><br><br>
+        <div id="botao">
+        <input type="submit" class="button" value="ENVIAR" required>
+        </div>
+        <br><br>   
+    </fieldset>
+    </form>
+</body>
+</html>
