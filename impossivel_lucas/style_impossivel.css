@@ -1,0 +1,44 @@
+body {
+    background-color: #009f3c;
+}
+
+.container {
+    background-color: black;
+    border-radius: 20px 20px 20px 20px;
+    text-align: center;
+}
+
+.caixa_text {
+    text-align: center;
+    width: 648px;
+    height: 163px;
+}
+
+.img_petim {
+    text-align: center;
+}
+
+.img_impossivel {
+    text-align: center;
+}
+
+.impossivel {
+    font-size: 1.17em;
+    color: white;
+    text-align: center;
+}
+
+.btn {
+    background-color: #18bd5b;
+    text-align: center;
+    color: white;
+    align-items: center;
+}
+
+.font_color {
+    font-size: 1.17em;
+    color: white;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.45;
+}
