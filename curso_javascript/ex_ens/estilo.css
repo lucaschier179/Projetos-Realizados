@@ -1,0 +1,67 @@
+body {
+    background: #00b8b1;
+    font: normal 16pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+    text-shadow: 4px 2px 6px rgba(0, 0, 0, 1);
+}
+
+section {
+    background: #005C59;
+    border-radius: 5px;
+    padding: 15px;
+    height: 20%;
+    width: 30%;
+    margin: auto;
+    box-shadow: 5px 5px 10px 4px rgba(0, 0, 0, 1);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 1);
+}
+
+.text {
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    margin-left: 12%;
+}
+
+#botao1 {
+    background-color: #00ff00;
+    margin-left: auto;
+    margin-bottom: 2%;
+    margin-top: 5%;    
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+}
+
+.box {
+    height: 25px;
+    width: 130px;
+    border-radius: 3px;
+    border: none;
+}
+
+div {
+    padding: 2%;
+    text-align: center;
+
+}
+
+#Respostas{
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons8-matemática-96.png">
+    <title>Super Contador</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <p class="fonte">Início: <input class="box" type="number" name="inicio" id="txtnum1"></p>
+            <p class="fonte">Fim: <input class="box" type="number" name="fim" id="txtnum2"></p>
+            <p class="fonte">Passo: <input class="box" type="number" name="passo" id="txtnum3"></p>
+            <p class="botao"><input id="botao1" type="button" value="Contar" onclick="contar()"></p>
+        </div>
+        <div id="res">
+            <label class="fonte">Preparando a contagem...</label>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; LucasMarceloSchier</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+    background: rgb(68, 0, 255);
+    font: bolder 14.1pt Helvetica;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: #31B509;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.363);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+label {
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+p.botao {
+    margin-top: 5%;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+#botao1 {
+    background-color: white;
+    border-radius: 15px;
+    width: 120px;
+    height: 30px;
+}
+
+#txtano {
+    border-radius: 5px;
+}
+
+#res {
+    color: white;
+    margin: 10%;
+    margin-top: 5%;
+}
+
+img {
+    margin-top: 5%;
+    margin-bottom: -5%;
+}
