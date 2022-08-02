@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Produto</title>
+    <style>
+        body {
+            font: 20pt Arial;
+            text-align: center;
+            background: rgba(143, 255, 78, 0.815);
+        }
+    </style>
+</head>
+<body>
+    <h1>Lucro de Venda de Produto</h1>
+    <h3>Insira o valor do produto:</h3>
+    <input type="number" name="prodt" id="prodt">
+    <input type="button" value="Verificar" onclick="lucro()">
+    <div id="res"></div>
+    
+    <script>
+        function lucro() {
+        let produto = window.document.getElementById('prodt')
+        let resposta = window.document.getElementById('res')
+        let valor = Number(produto.value)
+        
+        if (valor <= 20) {
+            valor = (valor * 0.45) + valor
+            resposta.innerHTML = `<p>O valor de venda do produto é <strong>R$ ${valor.toFixed(2)}</strong></p>`
+        } else {
+            valor = (valor * 0.30) + valor
+            resposta.innerHTML = `<p>O valor de venda do produto é <strong>R$ ${valor.toFixed(2)}</strong></p>`
+        }
+    }
+    </script>
+</body>
+</html>

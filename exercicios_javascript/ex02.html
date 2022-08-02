@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de Bônus Salarial</title>
+    <style>
+        body {
+            font: 20pt Arial;
+            text-align: center;
+            background: rgb(252, 255, 78);
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra o seu bônus salarial:</h1>
+    <h3>Insira o seu salário:</h3>
+    <input type="number" name="sal" id="sal">
+    <input type="button" value="Calcular" onclick="bonus()">
+    <div id="res"></div>
+
+    <script>
+        function bonus(){
+        let salario = window.document.getElementById('sal')
+        let resposta = window.document.getElementById('res')
+        let valor = Number(salario.value)
+
+        if (valor <= 800.00) {
+            valor = (valor * 0.30) + valor
+            resposta.innerHTML = `<p>O seu salário com o bônus é <strong>R$ ${valor}</strong></p>`
+        } else if (valor <= 1200.00) {
+            valor = (valor * 0.25) + valor
+            resposta.innerHTML = `<p>O seu salário com o bônus é <strong>R$ ${valor}</strong></p>`
+        } else if (valor <= 2400.00) {
+            valor = (valor * 0.20) + valor
+            resposta.innerHTML = `<p>O seu salário com o bônus é <strong>R$ ${valor}</strong></p>`
+        } else if (valor <= 3550.00) {
+            valor = (valor * 0.15) + valor
+            resposta.innerHTML = `<p>O seu salário com o bônus é <strong>R$ ${valor}</strong></p>`
+        }  else if (valor > 3550.01) {
+            valor = (valor * 0.10) + valor
+            resposta.innerHTML = `<p>O seu salário com o bônus é <strong>R$ ${valor}</strong></p>`
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio da Cantina</title>
+    <style>
+        body {
+            font: 20pt Arial;
+            text-align: center;
+            background: rgb(255, 150, 0);
+        }
+        #botao {
+            background-color: white;
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="corpo" action="Cardapio">
+        <h2>Clique no botão para consultar o cardápio:</h2>
+        <input id="botao" type="button" value="Abrir cardápio" onclick="cardapio()">
+
+        <script>
+            function cardapio() {
+                qBiscoito = parseInt(prompt("Digite a quantidade de biscoitos desejada:"))
+                qTrento = parseInt(prompt("Digite a quantidade de Trentos desejada:"))
+                qBala = parseInt(prompt("Digite a quantidade de balas desejada:"))
+                qSonhodevalsa = parseInt(prompt("Digite a quantidade de Sonhos de Valsa desejada:"))
+                qPaçoca = parseInt(prompt("Digite a quantidade de paçocas desejada:"))
+                valorTotal = Number(0)
+                valorTotal = valorTotal + (2.50 * qBiscoito)
+                valorTotal = valorTotal + (2.00 * qTrento)
+                valorTotal = valorTotal + (0.50 * qBala)
+                valorTotal = valorTotal + (1.50 * qSonhodevalsa)
+                valorTotal = valorTotal + (1.00 * qPaçoca)
+                alert('Total a pagar R$ ' + valorTotal.toFixed(2))
+            }
+        </script>
+    </form>
+</body>
+</html>

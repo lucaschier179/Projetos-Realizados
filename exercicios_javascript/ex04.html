@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Temperatura</title>
+    <style>
+        body {
+            font: 20pt Arial;
+            text-align: center;
+            background: rgba(77, 255, 181, 0.658);
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversão de Temperatura</h1>
+    <h3>Escolha a escala termométrica desejada:</h3>
+    <input type="number" name="temp" id="temp">
+    <div id="res"></div>
+    <select name="escl1" id="escalas1" required>
+        <option id="f" value="F" >Fahrenheit</option>
+        <option id="c" value="C" >Celsius</option>
+        <option id="k" value="K" >Kelvin</option>
+    </select>
+    <select name="escl2" id="escalas2" required>
+        <option id="f" value="F" >Fahrenheit</option>
+        <option id="c" value="C" >Celsius</option>
+        <option id="k" value="K" >Kelvin</option>
+    </select>
+    <span id="resposta"></span>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <script>
+        function calcular() {
+            let entrada1 = window.document.getElementById('escalas1').value 
+            let saida = window.document.getElementById('escalas2').value
+            let resultado = Number(window.document.getElementById('temp').value)
+
+            if (entrada1 == 'F') {
+                if(saida == 'C'){
+                    total = (resultado - 32 ) * (5/9)
+                }
+            if (entrada1 == 'F'){
+                if(saida == 'K'){
+                    total = (resultado - 32 ) * (5/9) + 273.15
+                    }
+                }
+            }
+
+            if (entrada1 == 'C') {
+                if(saida == 'F'){
+                    total = resultado * (9/5) + 32 
+                }
+            if (entrada1 == 'C'){
+                if(saida == 'K'){
+                    total = resultado + 273.15
+                    }
+                }
+            }
+
+            if (entrada1 == 'K') {
+                if(saida == 'F'){
+                    total = (resultado - 273.15) * (9/5) + 32
+                }
+            if (entrada1 == 'K'){
+                if(saida == 'C'){
+                    total = resultado - 273.15
+                    }
+                }
+            }
+
+            document.getElementById('resposta').innerHTML = total.toFixed(2) + "°" + saida
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de IMC</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body {
+            font: 14pt Helvetica;
+            text-align: center;
+            background: rgb(0, 70, 140);
+        }
+        #botao {
+            background-color: rgb(0, 255, 21);
+            width: 20%;
+            height: 10%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+        }
+        .caixas {
+            background-color: white;
+            width: 160px;
+            height: 25px;
+            border-radius: 6px;
+        }
+        #borda {
+            margin: auto;
+            border-radius: 15px;
+            border: rgb(0, 255, 255) solid 5px;
+            width: 800px;
+            height: 650px;
+            background-color: white;
+            padding: 5%;
+            text-align: center;
+            align-items: center;
+        }
+        h1{
+            margin-bottom: 5%;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 4%;
+        }
+        @media only screen and (max-width: 768px){
+            #borda {
+            width: 100%;
+            height: 100vh;
+            }
+            p {
+                margin-bottom: 8%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="formulario" action="cadastro">
+        <div id="borda">
+        <h1>Calculador de IMC</h1>
+        <p><strong>Nome: </strong>
+            <input class="caixas" type="text" name="nome" id="nome" placeholder="Digite o seu nome" autocomplete="off" required minlength="3" >
+        </p>
+        <p><strong>Email: </strong>
+            <input class="caixas" type="email" name="email" id="email" placeholder="Digite o seu email" autocomplete="off" required>
+        </p>
+        <p><strong>Sexo: </strong>
+            <input type="radio" name="radsex" id="masc" checked>
+            <label for="masc">Masculino</label>
+            <input type="radio" name="radsex" id="fem">
+            <label for="fem">Feminino</label>
+        </p>
+        <p><strong>Data de nascimento: </strong>
+            <input class="caixas" type="date" name="nasc" id="nasc">
+        </p>
+        <p><strong>Altura: </strong>
+            <input class="caixas" type="number" name="altura" id="altura" min="0" max="3.50" step=".01" placeholder="Digite a sua altura" autocomplete="off" required>
+        </p>
+        <p><strong>Peso/Kg: </strong>
+            <input class="caixas" type="number" name="peso" id="peso" min="0.00" max="500.00" step=".01" placeholder="Digite o seu peso" autocomplete="off" required>
+        </p>
+        <p><strong>Circunferência abdominal/cm: </strong>
+            <input class="caixas" type="number" name="circabdo" id="circabdo" min="0" max="130" placeholder="Digite a sua circunferência abdominal" autocomplete="off" required>
+        </p>
+        <input id="botao" type="button" value="Calcular" onclick="calcularimc()">
+        <div id="res"></div>
+        </div>
+    </form>
+
+    <script>
+        function calcularimc() {
+            let altura = Number(document.getElementById('altura').value)
+            let peso = Number(document.getElementById('peso').value)
+            let resultado = Number(document.getElementById('res').value)
+            let nome = document.getElementById('nome').value
+            let valor = peso / (altura*altura)
+            document.getElementById('res').style.color = "black";
+
+            if (altura != "" && peso != "" && nome != ""){
+            if (valor < 16) {
+                document.getElementById('res').innerHTML = `<p><strong>${nome}</strong> o seu Índice de Massa Corporal (IMC) é <strong> ${valor.toFixed(2)}</strong> (Magreza grau III)</p>`
+            } else if (valor < 17) {
+                document.getElementById('res').innerHTML = `<p><strong>${nome}</strong> o seu Índice de Massa Corporal (IMC) é <strong> ${valor.toFixed(2)}</strong> (Magreza grau II)</p>`
+            } else if (valor < 18.5) {
+                document.getElementById('res').innerHTML = `<p><strong>${nome}</strong> o seu Índice de Massa Corporal (IMC) é <strong> ${valor.toFixed(2)}</strong> (Magreza grau I)</p>`
+            } else if (valor < 24.9) {
+                document.getElementById('res').innerHTML = `<p><strong>${nome}</strong> o seu Índice de Massa Corporal (IMC) é <strong> ${valor.toFixed(2)}</strong> (Normal)</p>`
+            } else if (valor < 29.9) {
+                document.getElementById('res').innerHTML = `<p><strong>${nome}</strong> o seu Índice de Massa Corporal (IMC) é <strong> ${valor.toFixed(2)}</strong> (Obesidade grau I)</p>`
+            } else if (valor < 34.9) {
+                document.getElementById('res').innerHTML = `<p><strong>${nome}</strong> o seu Índice de Massa Corporal (IMC) é <strong> ${valor.toFixed(2)}</strong> (Obesidade grau II)</p>`
+            } else if (valor < 39.9) {
+                document.getElementById('res').innerHTML = `<p><strong>${nome}</strong> o seu Índice de Massa Corporal (IMC) é <strong> ${valor.toFixed(2)}</strong> (Obesidade grau II)</p>`
+            } else {
+                document.getElementById('res').innerHTML = `<p><strong>${nome}</strong> o seu Índice de Massa Corporal (IMC) é <strong> ${valor.toFixed(2)}</strong> (Obesidade grau III)</p>`
+            }
+        }else{
+            document.getElementById('res').innerHTML = "Preencha Os Campos!!"
+            document.getElementById('res').style.color = "red";
+        }
+    }
+    </script>
+</body>
+</html>
