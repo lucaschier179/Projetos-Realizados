@@ -19,6 +19,15 @@
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
+.score {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    font-size: 25pt;
+    font-family: 'Press Start 2P';
+    color: #333;
+}
+
 .pipe {
     position: absolute;
     bottom: -20px;
