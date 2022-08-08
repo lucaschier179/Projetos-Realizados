@@ -34,14 +34,14 @@ a:hover {
 }
 
 header#cabecalho img#icone {
-    position: absolute;
-    left: 1200px;
+    position: fixed;
+    left: 680px;
     top: 70px;
 }
 
 header#cabecalho {
     border-bottom: 1px #606060 solid;
-    height: 150px;
+    height: 200px;
     background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
 }
 
@@ -95,15 +95,15 @@ figure.foto-legenda:hover figcaption {
 /* Formatação do Menu */
 
 nav#menu {
-    display: block;
+    display: flex;
 }
 
 nav#menu ul {
     list-style: none;
     text-transform: uppercase;
-    position: absolute;
-    top: -20px;
-    left: 770px;
+    position: relative;
+    top: -135px;
+    left: 270px;
 }
 
 nav#menu li {
