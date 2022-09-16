@@ -100,7 +100,7 @@ nav#menu {
 
 nav#menu ul {
     text-transform: uppercase;
-    position: fixed;
+    position: absolute;
     top: -18px;
     left: 770px;
 }
