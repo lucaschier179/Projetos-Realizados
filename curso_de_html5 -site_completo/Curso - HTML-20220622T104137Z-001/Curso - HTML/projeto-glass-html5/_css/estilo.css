@@ -99,9 +99,8 @@ nav#menu {
 }
 
 nav#menu ul {
-    list-style: none;
     text-transform: uppercase;
-    position: absolute;
+    position: fixed;
     top: -18px;
     left: 770px;
 }
