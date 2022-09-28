@@ -16,7 +16,7 @@ div#interface {
     background-color: #ffffff;
     margin: -20px auto 0px auto;
     box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
 }
 
 p {
@@ -34,14 +34,14 @@ a:hover {
 }
 
 header#cabecalho img#icone {
-    position: relative;
-    left: 680px;
-    top: -50px;
+    position: absolute;
+    left: 750px;
+    top: 50px;
 }
 
 header#cabecalho {
     border-bottom: 1px #606060 solid;
-    height: 180px;
+    height: 150px;
     background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
 }
 
@@ -93,23 +93,23 @@ figure.foto-legenda:hover figcaption {
 }
 
 /* Formatação do Menu */
-
 nav#menu {
-    display: flex;
+    display: block;
 }
 
 nav#menu ul {
+    list-style: none;
     text-transform: uppercase;
     position: absolute;
-    top: -18px;
-    left: 770px;
+    top: -16px;
+    left: 300px;
 }
 
 nav#menu li {
     display: inline-block;
     background-color: #dddddd;
     padding: 10px;
-    margin: 2px;
+    margin: 1px;
     transition: background-color 1s;
 }
 
@@ -128,6 +128,7 @@ nav#menu a {
 
 nav#menu a:hover {
     color: #ffffff;
+    text-decoration: underline;
 }
 
 section#corpo {
@@ -139,7 +140,7 @@ section#corpo {
 }
 
 article#noticia-principal h2 {
-    font-size: 13pt;
+    font-size: 12pt;
     color: #606060;
     background-color: #dddddd;
     padding: 5px 0px 5px 10px;
