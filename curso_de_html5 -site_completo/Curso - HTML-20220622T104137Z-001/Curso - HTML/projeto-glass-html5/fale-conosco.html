@@ -6,8 +6,15 @@
     <link rel="shortcut icon" href="_icons/support_agent.png" type="image/x-icon">
     <link rel="stylesheet" href="_css/estilo.css"/>
     <link rel="stylesheet" href="_css/form.css"/>
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_total() {
+            let qtd = parseInt(document.getElementById('cQtd').value);
+            tot = qtd * 1500;
+            document.getElementById('cTot').value = tot;
+        }
+    </script>
 </head>
-<script language="javascript" src="_javascript/funcoes.js"></script>
 
 <body>
 <div id="interface">
@@ -38,11 +45,11 @@
                     <h3>Fale Conosco > Contatos</h3>
                     <h1>Formulário de Contato</h1>
                     <h2>por Lucas Marcelo Schier</h2>
-                    <h3 class="direita">Atualizado em 16/Setembro/2022</h3>
+                    <h3 class="direita">Atualizado em 9/Novembro/2022</h3>
                 </hgroup>
             </header>
 
-            <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com">
+            <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com" oninput="calc_total();">
                 <fieldset id="usuario">
                     <legend>Identificação do Usuário</legend>
                     <p>
@@ -110,27 +117,30 @@
                     </p>
                     <p>
                         <label for="cMsg">Mensagem:</label>
-                        <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui a sua mensagem"></textarea>
+                        <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui a sua mensagem"></textarea>
                     </p>
                 </fieldset>
             
                 <fieldset id="pedido"><legend>Quero um Google Glass</legend>
-                    <p>
+                    <p><input type="checkbox" name="tPed" id="cPed" checked/>
                         <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label>
                     </p>
                     <p>
                         <label for="cCor">Cor:</label>
+                        <input type="color" name="tCor" value="#0000FF">
                     </p>
                     <p>
                         <label for="cQtd">Quantidade:</label>
+                        <input type="number" name="tQtd" id="cQtd" min="0" max="50 " value="0">
                     </p>
                     <p>
                         <label for="cTot">Preço Total: R$</label>
+                        <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly>
                     </p>
                 </fieldset>
             
             
-            [BOTÃO ENVIAR]
+            <input type="submit" value="Enviar">
             </form> 
 
         </article>
